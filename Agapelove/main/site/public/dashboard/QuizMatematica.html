@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agape - Quiz</title>
+
+    <link rel="stylesheet" href="../css/AgapeIndex.css">
+
+</head>
+<body>
+    <div class="header" class="Headerinvisivel">
+        <div class="container">
+            <div id="div_logoheader">
+                <a href="#">
+                    <img src="../assets/imagens/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
+                </a>
+            </div>
+
+            <h4>
+                Welcome to my World!! | Ágape Love &copy; 2023
+            </h4>
+
+            <ul class="navbar">
+                <li>
+                    <a href="">
+                        Games
+                    </a>
+                </li>
+                <li>
+                    <a href="../AgapeIndex.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Perfil
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="quiz">
+        <div class="Quizcontainer">
+            <h4 id="tituloQuiz">Quiz de Matemática</h4>
+            <button onclick="Comecar()" id="btn_ComecarQuiz">Começar</button>
+                <div id="Caixa_Quiz">
+                    <div class="pergunta_quiz">
+                        <span id="numero1"></span>
+                        <span id="sinal"></span>
+                        <span id="numero2"></span>
+                    </div>
+                    <input type="number" placeholder="Resposta" id="ipt_numeroUsuario">
+                    <button onclick="verificar()">Verificar</button>
+                </div>
+            <div id="RespostaFinal"></div>
+            <button onclick="recomecar()" style="display: none;">Recomeçar</button>
+        </div>
+    </div>
+
+    <div class="footer" id="Footer1">
+        <img src="assets/imagens/iconsheep1.png " alt="Logo do Footer">
+        <div class="container" >
+            <h4>Ágape Love &copy; 2023</h4>
+            <div id="caixaFooter">
+                <div id="cardFooter">lorem</div>
+                <div id="cardFooter">lorem</div>
+                <div id="cardFooter">lorem</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var vt_sinais = [`*`,`+`,`-`]
+    var pontos = 0;
+    var Resultado = 0;
+    var sinalSorteado = 0;
+    var numeroSorteado = 0;
+    var numeroSorteado2 = 0;
+
+    function Proxima_Pergunta() {
+        sinalSorteado = Number((Math.random()*2).toFixed());
+        numeroSorteado = Number((Math.random()*100+1).toFixed());
+        numeroSorteado2 = Number((Math.random()*100+1).toFixed());
+
+        numero1.innerHTML = `${numeroSorteado}`;
+        sinal.innerHTML = `${vt_sinais[sinalSorteado]}`;
+        numero2.innerHTML = `${numeroSorteado2} = `;
+       
+        Resultado = `${numeroSorteado} ${vt_sinais[sinalSorteado]} ${numeroSorteado2}`;
+    }
+
+    function Comecar(){
+        pontos = 0;
+
+        Caixa_Quiz.style = "display:flex";
+        tituloQuiz.style = "display:flex";
+        btn_ComecarQuiz.style = "display:none";
+
+        Proxima_Pergunta()
+
+       
+        setTimeout(() => recomecar(), 40000);
+    }
+
+    function verificar() {
+        var ipt_numero = ipt_numeroUsuario.value;
+        
+        if (sinalSorteado == 0) {
+            Resultado = numeroSorteado * numeroSorteado2;
+        } else if (sinalSorteado == 1){
+            Resultado = numeroSorteado + numeroSorteado2;
+        } else {
+            Resultado = numeroSorteado - numeroSorteado2;
+        } 
+
+        if (ipt_numero == Resultado) {
+            pontos+=10;
+            Proxima_Pergunta();
+            ipt_numeroUsuario.value = '';
+        } else {
+            Proxima_Pergunta();
+            ipt_numeroUsuario.value = '';
+        }
+    }
+
+    function recomecar() {
+        alert(`Total de Pontos: ${pontos}`)
+        location.reload();
+    }  
+    
+</script>

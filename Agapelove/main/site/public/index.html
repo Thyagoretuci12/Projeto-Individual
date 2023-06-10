@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ágape | index</title>
+
+    <!-- LINKS AQUI COMEÇO -->
+    <script src="js/funcoes.js"></script>
+    <link rel="stylesheet" href="css/AgapeIndex.css">
+    <link rel="icon" href="./assets/icon/iconsheep2.png">
+
+    <!-- LINKS FIM -->
+</head>
+
+
+<body>
+    <div class="header" >
+        <div class="container">
+            <div id="div_logoheader">
+                <a href="#">
+                    <img src="assets/icon/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
+                </a>
+            </div>
+
+            <h4>
+                Welcome to my World!! | Ágape Love &copy; 2023
+            </h4>
+
+            <ul class="navbar">
+                <li>
+                    <a href="./dashboard/QuizMatematica.html">
+                        Quiz
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="Perfil.html">
+                        Perfil
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+     
+    <div class="aberturaIndex">
+        <div class="container">
+            <div></div>
+        </div>
+    </div>
+
+    <div class="div_sobreMim">
+        <div class="container">
+            <div class="card">
+                <h3>
+                    Sobre mim
+                </h3>
+
+                <span id="Linha"></span>
+
+                <p>
+                    Olá, Tudo bem? Eu sou o Thyago, um estudante da 
+                    <a href="https://www.linkedin.com/school/sptechschool/" class="SpTechTexto">
+                    São Paulo Tech School</a>, Tenho 18 anos atualmente e estou aqui para falar um pouco com você
+                    Sobre <a href="https://estiloadoracao.com/quem-e-jesus-cristo/" class="SpTechTexto">Jesus</a>, 
+                    espero que você esteja disposto a ouvir e que se posibilite a 
+                    aprender um pouco...  
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="assets/imagens/Mercado-de-Pirituba.jpg" alt="Foto - Pirituba" id="FotoPirituba">
+                
+                <span id="Linha"></span>
+                
+                <p>
+                    Nasci em <a href="https://pt.wikipedia.org/wiki/Pirituba" id="PiritubaLink">Pirituba</a> 
+                    uma cidade na Zona Norte de São Paulo, Cresci lá durante uma boa parte da 
+                    minha vida. Sou uma Pessoa bem tímida e por isso nunca fui de ter muitos amigos mas do ano 
+                    passado pra cá eu posso afirmar que tenho O Melhor Amigo que eu poderia ter...
+                </p>
+            </div>
+
+            <div class="card">
+                <p>
+                    Conheci <a href="https://estiloadoracao.com/quem-e-jesus-cristo/" class="SpTechTexto">Jesus</a> 
+                    ano passado e desde então Ele tem sido o que mais me representa, não só eu mas também da 
+                    religião que passei a seguir (lembrando que o foco não é religião ou religiosidade)...<br>
+                    Esse acontecimento mudou totalmente minha vida.
+                </p>
+                <div class="FotoThyago">
+                    <img src="./assets/imagens/ThyagoAjoelhado.jpg" alt="Foto - Thyago" id="FotoThyagoAjoelhado">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="versiculos">
+        <div class="container">
+            <div id="caixa_versiculos">
+                <span>insira um número: </span>
+                <input placeholder="Entre 1 e 50" id="numero">
+                <button onclick="AparecerVersiculos()"></button>
+                <span id="spn_versiculos"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="Footer1">
+        <img src="assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
+        <div class="container" >
+            <h4>Ágape Love &copy; 2023</h4>
+
+            <div class="redes fas fa-arrow-up">
+                <a href=""><img src="assets/icon/discord.svg" alt="icon - discord"></a>
+                <a href=""><img src="assets/icon/github-alt.svg" alt="icon - github"></a>
+                <a href="https://www.instagram.com/martiins_sx/"><img src="assets/icon/instagram-alt (1).svg" alt="icon - instagram"></a>
+                <a href=""><img src="assets/icon/twitter.svg" alt="icon - twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var vt_Versiculos = [
+        `Voltem-se para mim e sejam salvos, todos vocês, confins da terra; porque eu sou Deus, e não há outro.” (Isaías 45:22)`,
+        `Porque Deus tanto amou o mundo que deu o seu Filho Unigênito, para que todo o que nele crer não pereça, mas tenha a vida eterna. (João 3:16)`,
+        `Todavia, Deus, que é rico em misericórdia, pelo grande amor com que nos amou, deu-nos vida com Cristo quando ainda estávamos mortos em transgressões - pela graça vocês são salvos. (Efésios 2:4-5)`,
+        `Mas Deus demonstra seu amor por nós: Cristo morreu em nosso favor quando ainda éramos pecadores. (Romanos 5:8)`,
+        `Fui crucificado com Cristo. Assim, já não sou eu quem vive, mas Cristo vive em mim. A vida que agora vivo no corpo, vivo-a pela fé no filho de Deus, que me amou e se entregou por mim. (Gálatas 2:20)`,
+        `Mas tu, Senhor, és Deus compassivo e misericordioso, muito paciente, rico em amor e em fidelidade. (Salmos 86:15)`,
+        `Vejam como é grande o amor que o Pai nos concedeu: sermos chamados filhos de Deus, o que de fato somos! Por isso o mundo não nos conhece, porque não o conheceu. (1 João 3:1)`,
+        `Nós amamos porque ele nos amou primeiro. (1 João 4:19)`,
+        `O teu amor é melhor do que a vida! Por isso os meus lábios te exaltarão. (Salmos 63:3)`,
+        `Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas serão acrescentadas a vocês. (Mateus 6:33)`,
+        `Estou convencido de que aquele que começou boa obra em vocês, vai completá-la até o dia de Cristo Jesus. (Filipenses 1:6)`,
+        `Aquele que sai chorando enquanto lança a semente, voltará com cantos de alegria, trazendo os seus feixes. (Salmos 126:6)`,
+        `Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei. Tomai sobre vós o meu jugo, e aprendei de mim, que sou manso e humilde de coração; e encontrareis descanso para as vossas almas. Porque o meu jugo é suave, e o meu fardo é leve. (Mateus 11:28-30)`,
+        `E sabemos que todas as coisas contribuem juntamente para o bem daqueles que amam a Deus, daqueles que são chamados segundo o seu propósito. (Romanos 8:28)`,
+        `Jesus lhes respondeu: "Não são os que têm saúde que precisam de médico, mas sim os doentes. Eu não vim chamar justos, mas pecadores ao arrependimento". (Lucas 5:31-32)`,
+        `Se confessarmos os nossos pecados, ele é fiel e justo para perdoar os nossos pecados e nos purificar de toda injustiça. (1 João 1:9)`,
+        `se o meu povo, que se chama pelo meu nome, se humilhar e orar, buscar a minha face e se afastar dos seus maus caminhos, dos céus o ouvirei, perdoarei o seu pecado e curarei a sua terra. (2 Crônicas 7:14)`,
+        `O Senhor não demora em cumprir a sua promessa, como julgam alguns. Ao contrário, ele é paciente com vocês, não querendo que ninguém pereça, mas que todos cheguem ao arrependimento. (2 Pedro 3:9)`,
+        `Pedro respondeu: "Arrependam-se, e cada um de vocês seja batizado em nome de Jesus Cristo para perdão dos seus pecados, e receberão o dom do Espírito Santo. (Atos dos Apóstolos 2:38)`,
+        `É ele que perdoa todos os seus pecados e cura todas as suas doenças, (Salmos 103:3)`,
+        `Então ele lhe disse: "Filha, a sua fé a curou! Vá em paz e fique livre do seu sofrimento". (Marcos 5:34)`,
+        `O Senhor o susterá em seu leito de enfermidade, e da doença o restaurará. (Salmos 41:3)`,
+        `os cegos veem, os aleijados andam, os leprosos são purificados, os surdos ouvem, os mortos são ressuscitados, e as boas-novas são pregadas aos pobres; (Mateus 11:5)`,
+        `Ora, o Senhor é o Espírito e onde está o Espírito do Senhor ali há liberdade. (2 Coríntios 3:17)`,
+        `Porque sou eu que conheço os planos que tenho para vocês', diz o Senhor, 'planos de fazê-los prosperar e não de causar dano, planos de dar a vocês esperança e um futuro. (Jeremias 29:11)`,
+        `Ele fortalece o cansado e dá grande vigor ao que está sem forças. Até os jovens se cansam e ficam exaustos, e os moços tropeçam e caem; mas aqueles que esperam no Senhor renovam as suas forças. Voam alto como águias; correm e não ficam exaustos, andam e não se cansam. (Isaías 40:29-31)`,
+        `Sejam fortes e corajosos. Não tenham medo nem fiquem apavorados por causa delas, pois o Senhor, o seu Deus, vai com vocês; nunca os deixará, nunca os abandonará". (Deuteronômio 31:6)`,
+        `Não busquem ansiosamente o que comer ou beber; não se preocupem com isso. Pois o mundo pagão é que corre atrás dessas coisas; mas o Pai sabe que vocês precisam delas. (Lucas 12:29-30)`,
+        `Alegrem-se sempre no Senhor. Novamente direi: Alegrem-se! (Filipenses 4:4)`,
+        `Sim, coisas grandiosas fez o Senhor por nós, por isso estamos alegres. (Salmos 126:3)`,
+        `Reveste-se de força e dignidade; sorri diante do futuro. Fala com sabedoria e ensina com amor. (Provérbios 31:25-26)`,
+        `Olhem para o Senhor e para a sua força; busquem sempre a sua face. (1 Crônicas 16:11)`,
+        `Como é bom render graças ao Senhor e cantar louvores ao teu nome, ó Altíssimo; anunciar de manhã o teu amor leal e de noite a tua fidelidade, (Salmos 92:1-2)`,
+        `Que a paz de Cristo seja o juiz em seu coração, visto que vocês foram chamados para viver em paz, como membros de um só corpo. E sejam agradecidos. (Colossenses 3:15)`,
+        `Quem me oferece sua gratidão como sacrifício honra-me, e eu mostrarei a salvação de Deus ao que anda nos meus caminhos". (Salmos 50:23)`,
+        `Faze-me ouvir a tua benignidade pela manhã, pois em ti confio; faze-me saber o caminho que devo seguir, porque a ti levanto a minha alma. (Salmos 143:8)`,
+        `Agora, pois, permanecem a fé, a esperança e o amor, estes três; mas o maior destes é o amor. (1 Coríntios 13:13)`,
+        `Mas, sobretudo, tende ardente amor uns para com os outros, porque o amor cobrirá a multidão de pecados. (1 Pedro 4:8)`,
+        `O meu mandamento é este: Que vos ameis uns aos outros, assim como eu vos amei. (João 15:12)`,
+        `E ainda que tivesse o dom de profecia, e conhecesse todos os mistérios e toda a ciência, e ainda que tivesse toda a fé, de maneira tal que transportasse os montes, e não tivesse amor, nada seria. (1 Coríntios 13:2)`,
+        `Ninguém jamais viu a Deus; se nós amamos uns aos outros, Deus está em nós, e em nós é perfeito o seu amor. (1 João 4:12)`,
+        `Se alguém diz: Eu amo a Deus e aborrece a seu irmão, é mentiroso. Pois quem não ama seu irmão, ao qual viu, como pode amar a Deus, a quem não viu? (1 João 4:20)`,
+        `No amor, não há temor; antes, o perfeito amor lança fora o temor; porque o temor tem consigo a pena, e o que teme não é perfeito em amor. (1 João 4:18)`,
+        `Mas, como está escrito: As coisas que o olho não viu, e o ouvido não ouviu, e não subiram ao coração do homem são as que Deus preparou para os que o amam. (1 Coríntios 2:9)`,
+        `Vede quão grande amor nos tem concedido o Pai: que fôssemos chamados filhos de Deus. Por isso, o mundo não nos conhece, porque não conhece a ele. (1 João 3:1)`,
+        `Aquele que não ama não conhece a Deus, porque Deus é amor. (1 João 4:8)`,
+        `O ódio excita contendas, mas o amor cobre todas as transgressões. (Provérbios 10:12)`,
+        `Amarás, pois, ao Senhor, teu Deus, de todo o teu coração, e de toda a tua alma, e de todo o teu entendimento, e de todas as tuas forças; este é o primeiro mandamento. (Marcos 12:30)`,
+        `Antes, seguindo a verdade em amor, cresçamos em tudo naquele que é a cabeça, Cristo. (Efésios 4:15)`,
+        `Amo ao Senhor, porque ele ouviu a minha voz e a minha súplica. Porque inclinou para mim os seus ouvidos; portanto, invocá-lo-ei enquanto viver. (Salmos 116:1-2)`,
+        `Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação. (2 Timóteo 1:7)`,
+    ];
+    function AparecerVersiculos() {
+        var n = numero.value;
+        spn_versiculos.innerHTML += `${vt_Versiculos[n]}`
+    }
+</script>
+
