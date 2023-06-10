@@ -86,13 +86,15 @@
     </div>
 
     <div class="footer" id="Footer1">
-        <img src="assets/icon/iconsheep1.png " alt="Logo do Footer">
+        <img src="assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
         <div class="container" >
             <h4>Ágape Love &copy; 2023</h4>
-            <div id="caixaFooter">
-                <div id="cardFooter">lorem</div>
-                <div id="cardFooter">lorem</div>
-                <div id="cardFooter">lorem</div>
+
+            <div class="redes fas fa-arrow-up">
+                <a href="https://discord.com/channels/@me"><img src="assets/icon/discord.svg" alt="icon - discord"></a>
+                <a href="https://github.com/Thyagoretuci12/Projeto-Individual/tree/main"><img src="assets/icon/github-alt.svg" alt="icon - github"></a>
+                <a href="https://www.instagram.com/martiins_sx/"><img src="assets/icon/instagram-alt (1).svg" alt="icon - instagram"></a>
+                <a href="https://twitter.com/home"><img src="assets/icon/twitter.svg" alt="icon - twitter"></a>
             </div>
         </div>
     </div>
@@ -102,8 +104,6 @@
 </html>
 
 <script>
-
-
     function entrar() {
         aguardar();
 
@@ -112,7 +112,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Favor Preencha os campos ";
             finalizarAguardar();
             return false;
         }

@@ -34,10 +34,6 @@ CREATE TABLE livros(
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-CREATE TABLE versiculos(
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    versiculo VARCHAR(200)
-);
 
 
 

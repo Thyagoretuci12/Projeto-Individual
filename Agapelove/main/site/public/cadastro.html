@@ -8,10 +8,7 @@
 
     <title>Ágape | Sign up</title>
 
-
     <script src="./js/funcoes.js"></script>
-
-
     <link rel="icon" href="./assets/icon/iconsheep2.png">
     <link rel="stylesheet" href="./css/AgapeIndex.css">
 
@@ -21,7 +18,7 @@
     <div class="header" >
         <div class="container">
             <div id="div_logoheader">
-                <a href="#">
+                <a href="index.html">
                     <img src="assets/icon/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
                 </a>
             </div>
@@ -31,13 +28,9 @@
             </h4>
 
             <ul class="navbar">
+            
                 <li>
-                    <a href="./dashboard/QuizMatematica.html">
-                        Quiz
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="index.html">
                         Home
                     </a>
                 </li>
@@ -46,11 +39,7 @@
                         Login
                     </a>
                 </li>
-                <li>
-                    <a href="Perfil.html">
-                        Perfil
-                    </a>
-                </li>
+                
             </ul>
         </div>
     </div>
@@ -94,15 +83,19 @@
         </div>
     </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+    <div class="footer" id="Footer1">
+        <img src="assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
+        <div class="container" >
+            <h4>Ágape Love &copy; 2023</h4>
+
+            <div class="redes fas fa-arrow-up">
+                <a href="https://discord.com/channels/@me"><img src="assets/icon/discord.svg" alt="icon - discord"></a>
+                <a href="https://github.com/Thyagoretuci12/Projeto-Individual/tree/main"><img src="assets/icon/github-alt.svg" alt="icon - github"></a>
+                <a href="https://www.instagram.com/martiins_sx/"><img src="assets/icon/instagram-alt (1).svg" alt="icon - instagram"></a>
+                <a href="https://twitter.com/home"><img src="assets/icon/twitter.svg" alt="icon - twitter"></a>
+            </div>
         </div>
     </div>
-    <!--footer fim-->
-
 
 </body>
 
@@ -112,8 +105,6 @@
     function cadastrar() {
         aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -121,7 +112,7 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Favor preencha todos os campos!";
 
             finalizarAguardar();
             return false;

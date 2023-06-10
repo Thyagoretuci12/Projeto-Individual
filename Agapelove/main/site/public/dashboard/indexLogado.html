@@ -32,8 +32,8 @@
 
             <ul class="navbar">
                 <li>
-                    <a href="#">
-                        Curiosidade
+                    <a href="./dashboard/QuizMatematica.html">
+                        Quiz
                     </a>
                 </li>
                 <li>
@@ -47,11 +47,18 @@
                     </a>
                 </li>
                 <li>
-                    <a href="cadastro.html">
-                        Sign Up
+                    <a href="Perfil.html">
+                        Perfil
                     </a>
                 </li>
             </ul>
+        </div>
+    </div>
+
+     
+    <div class="aberturaIndex">
+        <div class="container">
+            <div></div>
         </div>
     </div>
 
@@ -101,20 +108,18 @@
         </div>
     </div>
 
-    <div class="porqueTema">
-        <div class="container">
-            <div class="card">
-                <h4>Por que escolhi essa tema?</h4>
-                <p>
-                    O meu interesse por Jesus despertou ano passado depois de uma experiência e passou a fazer parte
-                    do meu dia a dia e refletir em tudo o que faço, escolhi esse tema por que é o que mais me representa
-                    e o que mais reflete nas minha atitudes e ações no dia a dia.
-                </p>
+    <div class="versiculos">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
             </div>
-            <div class="card">
-                <h4>Meus Valores</h4>
-                <p>
-                </p>
+        </div>
+        <div class="container">
+            <div id="caixa_versiculos">
+                <span>insira um número: </span>
+                <input placeholder="Entre 1 e 50" id="NumeroVersiculo">
+                <button onclick="AparecerVersiculos()"></button>
+                <span id="spn_versiculos"></span>
             </div>
         </div>
     </div>
