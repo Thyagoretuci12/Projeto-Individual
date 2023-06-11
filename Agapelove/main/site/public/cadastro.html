@@ -28,7 +28,6 @@
             </h4>
 
             <ul class="navbar">
-            
                 <li>
                     <a href="index.html">
                         Home
@@ -39,7 +38,6 @@
                         Login
                     </a>
                 </li>
-                
             </ul>
         </div>
     </div>
@@ -96,9 +94,7 @@
             </div>
         </div>
     </div>
-
 </body>
-
 </html>
 
 <script>
@@ -116,6 +112,24 @@
 
             finalizarAguardar();
             return false;
+        } else if(senhaVar.length < 8){
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "A senha precisa conter no mínimo 8 caracteres!";
+
+            finalizarAguardar();
+            return false;
+        } else if(senhaVar != confirmacaoSenhaVar){
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "As senhas não podem ser distintas!";
+
+            finalizarAguardar();
+            return false;
+        } else if(!emailVar.includes('@') && !emailVar.includes('.')){
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Favor digite um email válido!";
+
+            finalizarAguardar();
+            return false;    
         }
         else {
             setInterval(sumirMensagem, 5000)

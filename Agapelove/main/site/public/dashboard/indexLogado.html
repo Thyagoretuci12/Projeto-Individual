@@ -9,20 +9,20 @@
     <title>Ágape | index</title>
 
     <!-- LINKS AQUI COMEÇO -->
-    <script src="./js/funcoes.js"></script>
-    <link rel="stylesheet" href="css/AgapeIndex.css">
-    <link rel="icon" href="./assets/icon/iconsheep2.png">
+    <script src="../js/funcoes.js"></script>
+    <link rel="stylesheet" href="../css/AgapeIndex.css">
+    <link rel="icon" href="../assets/icon/iconsheep2.png">
 
     <!-- LINKS FIM -->
 </head>
 
-
 <body>
+<!-- COMEÇO HEADER -->
     <div class="header" >
         <div class="container">
             <div id="div_logoheader">
                 <a href="#">
-                    <img src="assets/icon/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
+                    <img src="../assets/icon/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
                 </a>
             </div>
 
@@ -32,36 +32,31 @@
 
             <ul class="navbar">
                 <li>
-                    <a href="./dashboard/QuizMatematica.html">
+                    <a href="indexLogado.html">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="QuizMatematica.html">
                         Quiz
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
-                        Home
+                    <a href="mural.html">
+                        Pedidos
                     </a>
                 </li>
                 <li>
-                    <a href="login.html">
-                        Login
-                    </a>
-                </li>
-                <li>
-                    <a href="Perfil.html">
-                        Perfil
+                    <a href="#" onclick="limparSessao()">
+                        Log out
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-
-     
-    <div class="aberturaIndex">
-        <div class="container">
-            <div></div>
-        </div>
-    </div>
-
+<!-- FIM HEADER -->
+    
+<!-- COMEÇO SOBRE MIM -->
     <div class="div_sobreMim" id="about_me">
         <div class="container">
             <div class="card">
@@ -82,7 +77,7 @@
             </div>
 
             <div class="card">
-                <img src="assets/imagens/Mercado-de-Pirituba.jpg" alt="Foto - Pirituba" id="FotoPirituba">
+                <img src="../assets/imagens/Mercado-de-Pirituba.jpg" alt="Foto - Pirituba" id="FotoPirituba">
                 
                 <span id="Linha"></span>
                 
@@ -102,41 +97,75 @@
                     Esse acontecimento mudou totalmente minha vida.
                 </p>
                 <div class="FotoThyago">
-                    <img src="./assets/imagens/ThyagoAjoelhado.jpg" alt="Foto - Thyago" id="FotoThyagoAjoelhado">
+                    <img src="../assets/imagens/ThyagoAjoelhado.jpg" alt="Foto - Thyago" id="FotoThyagoAjoelhado">
                 </div>
             </div>
         </div>
     </div>
+<!-- FIM SOBRE MIM -->
 
-    <div class="versiculos">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+<!-- COMEÇO CURIOSIDADE -->
+    <div class="curiosidade" id="Curious">
+        <div class="cardMetade1">
+            <div class="card">
+                <h1>Curiosidade</h1 >
+                <img src="../assets/imagens/BibliaCapa.jpg" alt="Bíblia">
+                <span>
+                    A <a href="https://www.respostas.com.br/quando-foi-escrita-a-biblia/">Bíblia</a> não é apenas um livro, é uma coleção de livros inspirados por Deus ao longo de vários séculos.<br>
+                    Ele foi parcialmente traduzido para dois mil oitocentos e oitenta e três idiomas.<br>
+                    Escrito a mais de 2000 anos A Bíblia é o livro mais vendido de todos os tempos.
+                </span>
             </div>
         </div>
-        <div class="container">
-            <div id="caixa_versiculos">
-                <span>insira um número: </span>
-                <input placeholder="Entre 1 e 50" id="NumeroVersiculo">
-                <button onclick="AparecerVersiculos()"></button>
-                <span id="spn_versiculos"></span>
+        <div class="cardMetade2">
+            <div class="card">
+                <h1>Caixa de Versículos</h1>
+                <h5>Insira um número entre 1 e 50:</h5>
+                <input type="number" id="ipt_numeroVersiculo" placeholder="">
+                <button onclick="AparecerVersiculos()">Ver</button>
+                <div id="div_aparecerVersiculo"></div>
             </div>
         </div>
     </div>
+<!-- FIM CURIOSIDADE -->
 
+<!-- COMEÇO GALERIA -->
+    <div class="galeria" id="Galery">
+        <div class="MetadeGaleria1">
+            <div class="CardGaleria">
+                <img src="../assets/imagens/Marcha.jpg" alt="imagem - marcha para Jesus"></img>
+                <h1>01</h1>
+                <span>Caminhar com Cristo me proporcionou momentos que jamais imaginei ter...</span>    
+            </div>
+        </div>
+        <div class="MetadeGaleria2">
+            <div class="CardGaleria">
+                <img src="../assets/imagens/igreja_ima.jpg" alt="imagem - ima na igreja"></img>
+                <h1>02</h1>
+                <span>
+                    Experiências atrás de experiências... Caminhar com Cristo me deu uma nova família, e você também pode ter
+                    a sua... Tá esperando o que?! Vamos!!!! 
+                </span>    
+            </div>
+        </div>
+    </div>
+<!-- FIM GALERIA -->
+
+<!-- COMEÇO FOOTER -->
     <div class="footer" id="Footer1">
-        <img src="assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
+        <img src="../assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
         <div class="container" >
             <h4>Ágape Love &copy; 2023</h4>
 
             <div class="redes fas fa-arrow-up">
-                <a href="https://discord.com/channels/@me"><img src="assets/icon/discord.svg" alt="icon - discord"></a>
-                <a href="https://github.com/Thyagoretuci12/Projeto-Individual/tree/main"><img src="assets/icon/github-alt.svg" alt="icon - github"></a>
-                <a href="https://www.instagram.com/martiins_sx/"><img src="assets/icon/instagram-alt (1).svg" alt="icon - instagram"></a>
-                <a href="https://twitter.com/home"><img src="assets/icon/twitter.svg" alt="icon - twitter"></a>
+                <a href="https://discord.com/channels/@me"><img src="../assets/icon/discord.svg" alt="icon - discord"></a>
+                <a href="https://github.com/Thyagoretuci12/Projeto-Individual/tree/main"><img src="../assets/icon/github-alt.svg" alt="icon - github"></a>
+                <a href="https://www.instagram.com/martiins_sx/"><img src="../assets/icon/instagram-alt (1).svg" alt="icon - instagram"></a>
+                <a href="https://twitter.com/home"><img src="../assets/icon/twitter.svg" alt="icon - twitter"></a>
             </div>
         </div>
     </div>
+<!-- FIM FOOTER -->    
 </body>
 </html>
 
@@ -194,20 +223,19 @@
         `Amo ao Senhor, porque ele ouviu a minha voz e a minha súplica. Porque inclinou para mim os seus ouvidos; portanto, invocá-lo-ei enquanto viver. (Salmos 116:1-2)`,
         `Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação. (2 Timóteo 1:7)`,
     ];
+    
     function AparecerVersiculos() {
-        var n = NumeroVersiculo.value;
-        
+        var n = ipt_numeroVersiculo.value;
+        div_aparecerVersiculo.innerHTML = ``;
+
         if (n <= 0 || n > 50) {
-            cardErro.style.display = "flex"
-            mensagem_erro.innerHTML = " O número precisa estar entre 1 e 50";
-            return false;
+            alert("O número digitado precisa estar entre 1 e 50!!")
         } else {
             for(let i = 0; i < vt_Versiculos.length; i++){
-                if (i = n-1) {
-                    spn_versiculos.innerHTML += `${vt_Versiculos[i]}`;
+                if (i == n-1) {
+                    div_aparecerVersiculo.innerHTML += `${vt_Versiculos[i]}`;
                 }
             }
-            setInterval(sumirMensagem, 5000)
         }
     }
 </script>

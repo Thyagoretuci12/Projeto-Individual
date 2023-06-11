@@ -16,8 +16,8 @@
     <!-- LINKS FIM -->
 </head>
 
-
 <body>
+<!-- COMEÇO HEADER -->
     <div class="header" >
         <div class="container">
             <div id="div_logoheader">
@@ -32,13 +32,13 @@
 
             <ul class="navbar">
                 <li>
-                    <a href="#">
+                    <a href="#Curious">
                         Curiosidade
                     </a>
                 </li>
                 <li>
-                    <a href="index.html">
-                        Home
+                    <a href="#Galery">
+                        Galeria 
                     </a>
                 </li>
                 <li>
@@ -54,7 +54,9 @@
             </ul>
         </div>
     </div>
-
+<!-- FIM HEADER -->
+    
+<!-- COMEÇO SOBRE MIM -->
     <div class="div_sobreMim" id="about_me">
         <div class="container">
             <div class="card">
@@ -100,25 +102,56 @@
             </div>
         </div>
     </div>
+<!-- FIM SOBRE MIM -->
 
-    <div class="porqueTema">
-        <div class="container">
+<!-- COMEÇO CURIOSIDADE -->
+    <div class="curiosidade" id="Curious">
+        <div class="cardMetade1">
             <div class="card">
-                <h4>Por que escolhi essa tema?</h4>
-                <p>
-                    O meu interesse por Jesus despertou ano passado depois de uma experiência e passou a fazer parte
-                    do meu dia a dia e refletir em tudo o que faço, escolhi esse tema por que é o que mais me representa
-                    e o que mais reflete nas minha atitudes e ações no dia a dia.
-                </p>
+                <h1>Curiosidade</h1 >
+                <img src="assets/imagens/BibliaCapa.jpg" alt="Bíblia">
+                <span>
+                    A <a href="https://www.respostas.com.br/quando-foi-escrita-a-biblia/">Bíblia</a> não é apenas um livro, é uma coleção de livros inspirados por Deus ao longo de vários séculos.<br>
+                    Ele foi parcialmente traduzido para dois mil oitocentos e oitenta e três idiomas.<br>
+                    Escrito a mais de 2000 anos A Bíblia é o livro mais vendido de todos os tempos.
+                </span>
             </div>
+        </div>
+        <div class="cardMetade2">
             <div class="card">
-                <h4>Meus Valores</h4>
-                <p>
-                </p>
+                <h1>Caixa de Versículos</h1>
+                <h5>Insira um número entre 1 e 50:</h5>
+                <input type="number" id="ipt_numeroVersiculo" placeholder="">
+                <button onclick="AparecerVersiculos()">Ver</button>
+                <div id="div_aparecerVersiculo"></div>
             </div>
         </div>
     </div>
+<!-- FIM CURIOSIDADE -->
 
+<!-- COMEÇO GALERIA -->
+    <div class="galeria" id="Galery">
+        <div class="MetadeGaleria1">
+            <div class="CardGaleria">
+                <img src="assets/imagens/Marcha.jpg" alt="imagem - marcha para Jesus"></img>
+                <h1>01</h1>
+                <span>Caminhar com Cristo me proporcionou momentos que jamais imaginei ter...</span>    
+            </div>
+        </div>
+        <div class="MetadeGaleria2">
+            <div class="CardGaleria">
+                <img src="assets/imagens/igreja_ima.jpg" alt="imagem - ima na igreja"></img>
+                <h1>02</h1>
+                <span>
+                    Experiências atrás de experiências... Caminhar com Cristo me deu uma nova família, e você também pode ter
+                    a sua... Tá esperando o que?! Vamos!!!! 
+                </span>    
+            </div>
+        </div>
+    </div>
+<!-- FIM GALERIA -->
+
+<!-- COMEÇO FOOTER -->
     <div class="footer" id="Footer1">
         <img src="assets/icon/iconsheep1.png " alt="Logo do Footer" id="logofooter">
         <div class="container" >
@@ -132,6 +165,7 @@
             </div>
         </div>
     </div>
+<!-- FIM FOOTER -->    
 </body>
 </html>
 
@@ -189,20 +223,19 @@
         `Amo ao Senhor, porque ele ouviu a minha voz e a minha súplica. Porque inclinou para mim os seus ouvidos; portanto, invocá-lo-ei enquanto viver. (Salmos 116:1-2)`,
         `Porque Deus não nos deu o espírito de temor, mas de fortaleza, e de amor, e de moderação. (2 Timóteo 1:7)`,
     ];
+    
     function AparecerVersiculos() {
-        var n = NumeroVersiculo.value;
-        
+        var n = ipt_numeroVersiculo.value;
+        div_aparecerVersiculo.innerHTML = ``;
+
         if (n <= 0 || n > 50) {
-            cardErro.style.display = "flex"
-            mensagem_erro.innerHTML = " O número precisa estar entre 1 e 50";
-            return false;
+            alert("O número digitado precisa estar entre 1 e 50!!")
         } else {
             for(let i = 0; i < vt_Versiculos.length; i++){
-                if (i = n-1) {
-                    spn_versiculos.innerHTML += `${vt_Versiculos[i]}`;
+                if (i == n-1) {
+                    div_aparecerVersiculo.innerHTML += `${vt_Versiculos[i]}`;
                 }
             }
-            setInterval(sumirMensagem, 5000)
         }
     }
 </script>

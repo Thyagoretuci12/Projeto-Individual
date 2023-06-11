@@ -30,23 +30,13 @@
 
             <ul class="navbar">
                 <li>
-                    <a href="./dashboard/QuizMatematica.html">
-                        Quiz
-                    </a>
-                </li>
-                <li>
-                    <a href="AgapeIndex.html">
+                    <a href="index.html">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="login.html">
-                        Login
-                    </a>
-                </li>
-                <li>
-                    <a href="Perfil.html">
-                        Perfil
+                    <a href="cadastro.html">
+                        Sign up
                     </a>
                 </li>
             </ul>
@@ -74,7 +64,7 @@
                     </div>
                     <button class="botao" onclick="entrar()">Entrar</button>
                 </div>
-                <span class="linkCadastro">Não te uma conta? <a href="cadastro.html">Registre-se já!</a></span>
+                <span class="linkCadastro">Não tem uma conta? <a href="cadastro.html">Registre-se já!</a></span>
 
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/icon/iconCarregandoMarrom.svg" id="loading-gif">
@@ -147,8 +137,8 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
+                        window.location = "./dashboard/indexLogado.html";
+                    }, 2000); // apenas para exibir o loading
 
                 });
 

@@ -182,49 +182,145 @@ a{
 }
 /* CARD 3 */
 
-/* INICIO SOBRE PROJETO */
-.porqueTema{
-    border-top: #2a2a2a solid 50px;
-    border-bottom: #2a2a2a solid 50px;
-    background-color: #2a2a2a;
-}
-
-.porqueTema .container{
-    display: flex;
-    justify-content: space-evenly;
- }
-
-.porqueTema .container .card{
-    flex-direction: column;
-    display: flex;
-    align-items: centerd ;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    width: 30%;
-    height: 40%;
-    color: #E5E5E5;
-    border-top: #E5E5E5 solid 3px;
-    background-color: #2a2a2a;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.porqueTema .container .card .Box{
-    background-color: #E5E5E5;
-    border: solid 10px #be8a5e;
-}
-.porqueTema h1{
-    color: #E5E5E5;
-    margin: 0%;
-    position: relative;
-    left: 100px;
-}
-/* FIM SOBRE PROJETO */
-
 /* INICIO CAIXA VERSICULOS */
+.curiosidade{
+    display: flex;
+    background-color: #E5E5E5;
+    padding-bottom: 50px;
+    padding-top: 100px;
+}
 
+.cardMetade1, .cardMetade2{
+    flex: 1;
+}
 
+.cardMetade1{
+    display: flex;
+    justify-content: center;
+}
+.cardMetade1 .card{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #2a2a2a;
+    gap: 20px;
+}
+
+.cardMetade1 .card a {
+    color: #2a2a2a;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.cardMetade1 .card a:hover{
+    text-decoration: underline;
+    color: #be8a5e;
+}
+
+.curiosidade .cardMetade1 img {
+    width: 200px;
+    height: 250px;
+    padding-top: 20px;
+    border-top: #2a2a2a solid 2px;
+}
+
+.cardMetade2{
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-bottom: 30px;
+}
+
+.cardMetade2 .card{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #E5E5E5;
+    gap: 10px;
+}
+
+.cardMetade2 .card input{
+    background-color: #E5E5E5;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.cardMetade2 .card button{
+    font-weight: bold;
+    font-size: large;
+    color: #2a2a2a;
+    padding: 10px;
+    width: 100px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #E5E5E5;
+}
+
+#div_aparecerVersiculo{
+    background-color: #E5E5E5;
+    width: 100%;
+    height: 40%;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: #2a2a2a;
+    font-weight: 600;
+}
 /* FIM CAIXA VERSICULOS */
+
+/* INICIO GALERIA */
+.galeria{
+    background-color: #2a2a2a;
+    display: flex;
+    height: 600px;
+    padding: 30px;
+}
+.MetadeGaleria1, .MetadeGaleria2{
+    flex: 1;
+}
+
+.MetadeGaleria1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #E5E5E5;
+}
+
+.MetadeGaleria1 img {
+    width: 140px;
+    height: 300px;
+}
+
+.MetadeGaleria2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: #E5E5E5;
+}
+
+.MetadeGaleria2 img{
+    width: 300px;
+    height: 300px;
+}
+
+.CardGaleria{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+}
+/* FIM GALERIA */
 
 /* INICIO DO LOGIN*/
 .login{

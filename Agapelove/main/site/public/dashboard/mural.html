@@ -6,51 +6,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaTech | Avisos</title>
+    <title>Ágape | Pedidos</title>
 
+    <link rel="stylesheet" href="../css/AgapeIndex.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./dashboards.css">
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
-   
+
+    
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
-    <!-- <body onload="validarSessao()"> -->
-
-    <div class="janela">
-
-
-        <div class="header-left">
-
-            <h1>AquaTech</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Aquários</h3>
+<body onload="validarSessao(), atualizarFeed()">
+    <div class="header" >
+        <div class="container">
+            <div id="div_logoheader">
+                <a href="#">
+                    <img src="../assets/icon/iconsheep1.png" alt="Logo do Header" class="VoltarInicio">
                 </a>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
+            <h4>
+                Welcome to my World!! | Ágape Love &copy; 2023
+            </h4>
 
-            <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+            <ul class="navbar">
+                <li>
+                    <a href="indexLogado.html">
+                        home
+                    </a>
+                </li>
+                <li>
+                    <a href="QuizMatematica.html">
+                        Quiz
+                    </a>
+                </li>
+                <li>
+                    <a href="mural.html">
+                        Pedidos
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="limparSessao()">
+                        Log out
+                    </a>
+                </li>
+            </ul>
         </div>
-
+    </div>
         <div class="dash-right">
 
 
@@ -102,7 +105,6 @@
             </div>  -->
 
         </div>
-    </div>
 </body>
 
 </html>

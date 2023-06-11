@@ -34,6 +34,7 @@ CREATE TABLE livros(
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-
-
-
+SELECT * FROM usuario;
+SELECT * FROM aviso;
+SELECT * FROM Quiz;
+SELECT * FROM livros;
