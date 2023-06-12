@@ -11,30 +11,19 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)	
 );
 
-CREATE TABLE aviso (
+CREATE TABLE perfil (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(300),
+	nome VARCHAR(50),
+	email VARCHAR(50),
+	senha VARCHAR(50),	
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-CREATE TABLE quiz(
+CREATE TABLE medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	pontos INT,
-	momento DATETIME, 
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
-
-CREATE TABLE livros(
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR (50),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+	pontos INT
 );
 
 SELECT * FROM usuario;
-SELECT * FROM aviso;
-SELECT * FROM Quiz;
-SELECT * FROM livros;
+SELECT * FROM medida;
